@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="page" href="immo.html">
+    
+    <title>Formulaire de recherche</title>
+</head>
+<body>
+    <header>
+        <img src="Logo.jpg" id="logo" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="immo.html">Home</a></li>
+                <li><a href="immo.html">A propos</a></li>
+                <li><a href="immo.html">Notre services</a></li>
+                <li><a href="immo.html">Formulaire</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <p class="annonce">Site d'annonce <strong>immobilieres Marocain</strong></p>
+        </section>
+        <section class="question">
+            <h3>Formulaire de recherche</h3>
+            <div class="recherche">
+                <input type="search" name="recherche" id="rech" placeholder="cherchez votre maison">
+                <button id="but">Rechercher</button>
+            
+            </div>
+            <div class="venlo">
+                <input type="radio" name="vente" id="vent" value="vent"><label for="vent">A vendre</label>
+                <input type="radio" name="vente" id="rent" value="rent"><label for="rent">A louer</label>  
+            </div>
+            <div class="choice">  
+                <label for="choix" >Type de proprietes</label>
+                <input list="proprietes" id="choix" placeholder="Type de proprietes">
+                <datalist id="proprietes">
+                        <option value="Appartement">
+                        <option value="Villa">
+                        <option value="Bureau">
+                        <option value="Magasin">
+                        <option value="Terrain">
+                </datalist>
+            </div>
+            
+            <div class="chambres">
+                <label for="nombre">Nombre de chambres:</label>
+                <input type="number" name="num" id="num" min="1"  placeholder="Nombre de chambre">
+            </div>
+            <div class="prix">
+                <label for="price">Saisie le prix</label>
+                <input type="number" name="price" id="price" min="500" placeholder="le prix en DH">
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="buy" id="vendu" >
+                <label for="vendu">Montrez les maisons louer et vendue aussi.</label>
+            </div>
+            <div>
+                <input type="submit" value="sauvgarder" class="envoyer">
+                <input type="reset" value="suprimer" class="envoyer">
+            </div>
+        </section>
+    </main>
+   
+</body>
+</html>
