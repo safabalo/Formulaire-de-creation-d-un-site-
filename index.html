@@ -22,22 +22,39 @@
     </header>
     
     <main>
+        <form action="">
         <section>
             <p class="annonce">Site d'annonce <strong>immobilieres Marocain</strong></p>
         </section>
         <section class="question">
             <h3>Formulaire de recherche</h3>
             <div class="recherche">
-                <input type="search" name="recherche" id="rech" placeholder="cherchez votre maison">
+                <label for="cherche" >Les villes:</label>
+                <input list="villes" id="cherche" placeholder="La ville de choix">
+                <datalist id="villes">
+                        <option value="Casablanca">
+                        <option value="Rabat">
+                        <option value="Tanger">
+                        <option value="Fes">
+                        <option value="Tetouan">
+                        <option value="Agadir">
+                        <option value="Marrakesh">
+                        <option value="Laayoun">
+                        <option value="Salé">
+                        <option value="Youssoufia">
+                </datalist>
                 <button id="but">Rechercher</button>
-            
             </div>
             <div class="venlo">
-                <input type="radio" name="vente" id="vent" value="vent"><label for="vent">A vendre</label>
-                <input type="radio" name="vente" id="rent" value="rent"><label for="rent">A louer</label>  
+                <div class="vente">
+                    <input type="radio" name="vente" id="vent" value="vent"><label for="vent">A vendre</label>
+                </div>
+                <div class="louer">
+                    <input type="radio" name="vente" id="rent" value="rent"><label for="rent">A louer</label>  
+                </div>
             </div>
             <div class="choice">  
-                <label for="choix" >Type de proprietes</label>
+                <label for="choix" >Type de proprietes:</label>
                 <input list="proprietes" id="choix" placeholder="Type de proprietes">
                 <datalist id="proprietes">
                         <option value="Appartement">
@@ -53,18 +70,20 @@
                 <input type="number" name="num" id="num" min="1"  placeholder="Nombre de chambre">
             </div>
             <div class="prix">
-                <label for="price">Saisie le prix</label>
-                <input type="number" name="price" id="price" min="500" placeholder="le prix en DH">
+                <p>Prix:</p>
+                <label for="min">Min</label><input type="number" name="price" id="min" min="500" placeholder="le prix en DH">
+                <label for="max">Max</label><input type="number" name="price" id="max" min="500" placeholder="le prix en DH">
             </div>
             <div class="checkbox">
                 <input type="checkbox" name="buy" id="vendu" >
                 <label for="vendu">Montrez les maisons louer et vendue aussi.</label>
             </div>
-            <div>
-                <input type="submit" value="sauvgarder" class="envoyer">
+            <div class="sub">
+                <input type="submit" value="Chercher" class="envoyer">
                 <input type="reset" value="suprimer" class="envoyer">
             </div>
         </section>
+    </form>
     </main>
    
 </body>
